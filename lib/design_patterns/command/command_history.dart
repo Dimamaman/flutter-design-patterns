@@ -6,6 +6,7 @@ class CommandHistory {
   final _commandList = ListQueue<Command>();
 
   bool get isEmpty => _commandList.isEmpty;
+
   List<String> get commandHistoryList =>
       _commandList.map((c) => c.getTitle()).toList();
 
