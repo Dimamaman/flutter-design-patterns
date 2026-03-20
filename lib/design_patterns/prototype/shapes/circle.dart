@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:faker/faker.dart' hide Color;
 import 'package:flutter/material.dart';
 
@@ -30,8 +32,10 @@ class Circle extends Shape {
 
   @override
   Widget render() {
-    return SizedBox(
+    log("JJJJJJJ Circle $radius ~~ $color");
+    return AnimatedContainer(
       height: 120.0,
+      duration: const Duration(milliseconds: 300),
       child: Center(
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 500),
